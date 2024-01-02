@@ -1,4 +1,4 @@
-import { MouseEventHandler, ReactNode } from 'react';
+import { ButtonHTMLAttributes, MouseEventHandler, ReactNode } from 'react';
 
 export interface ICard {
     title: string;
@@ -14,7 +14,8 @@ export interface ICardsProps {
 }
 
 export interface IButtonProps {
-    onClick: MouseEventHandler<HTMLButtonElement>;
+    onClick?: MouseEventHandler<HTMLButtonElement>;
+    type?: ButtonHTMLAttributes<HTMLButtonElement>['type'];
     className?: string;
     children: ReactNode;
 }
