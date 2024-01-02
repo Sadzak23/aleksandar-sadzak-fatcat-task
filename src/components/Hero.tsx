@@ -1,11 +1,8 @@
 import { FC } from 'react';
 
-interface Props {
-    title: string;
-    image: string;
-}
+import { IHeroProps } from '@homework-task/types/IComponents';
 
-export const Hero: FC<Props> = ({ title, image }) => (
+export const Hero: FC<IHeroProps> = ({ title, image }) => (
     <div className="flex row justify-center items-center gap-4 h-screen">
         <div className="w-4/12">
             <h1 className="text-3xl font-bold">{title}</h1>

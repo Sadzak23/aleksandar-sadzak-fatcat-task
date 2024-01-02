@@ -1,14 +1,8 @@
 import { FC } from 'react';
 
-interface Props {
-    items: {
-        title: string;
-        description: string;
-        image: string;
-    }[];
-}
+import { IPanelShowcaseProps } from '@homework-task/types/IComponents';
 
-export const PanelShowcase: FC<Props> = ({ items }) => (
+export const PanelShowcase: FC<IPanelShowcaseProps> = ({ items }) => (
     <div className="flex justify-center items-center">
         <div className="grid grid-cols-3 gap-8 w-8/12 justify-center items-center">
             {items.map(({ title, description, image }) => (
