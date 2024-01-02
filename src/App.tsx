@@ -3,14 +3,15 @@ import { FC } from 'react';
 
 import { QueryClient, QueryClientProvider } from 'react-query';
 
-import { UsersList } from '@homework-task/components/Users/UsersList';
+import { PageGenerator } from '@homework-task/components/Generators/PageGenerator';
+import { homePageData } from '@homework-task/utils/pageData';
 
 const queryClient = new QueryClient();
 
 const App: FC = () => (
     <main>
         <QueryClientProvider client={queryClient}>
-            <UsersList />
+            <PageGenerator data={homePageData} />
         </QueryClientProvider>
     </main>
 );
