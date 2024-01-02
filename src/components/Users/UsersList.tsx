@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 
+import { useQuery } from '@tanstack/react-query';
 import { AxiosError } from 'axios';
-import { useQuery } from 'react-query';
 
 import { getUsers } from '@homework-task/api/UserApi';
 import { Button } from '@homework-task/components/Button';
@@ -12,10 +12,10 @@ import { IUser } from '@homework-task/types/IUser';
 export const UsersList: FC = () => {
     const [isTableView, setIsTableView] = useState(true);
 
-    const { data, error, isLoading } = useQuery<IUser[], AxiosError>(
-        'users',
-        getUsers
-    );
+    const { data, error, isLoading } = useQuery<IUser[], AxiosError>({
+        queryKey: ['users'],
+        queryFn: getUsers,
+    });
 
     return isLoading ? (
         <p>Loading...</p>
