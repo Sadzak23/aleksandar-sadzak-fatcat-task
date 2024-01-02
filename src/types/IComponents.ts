@@ -16,6 +16,7 @@ export interface ICardsProps {
 export interface IButtonProps {
     onClick?: MouseEventHandler<HTMLButtonElement>;
     type?: ButtonHTMLAttributes<HTMLButtonElement>['type'];
+    disabled?: boolean;
     className?: string;
     children: ReactNode;
 }

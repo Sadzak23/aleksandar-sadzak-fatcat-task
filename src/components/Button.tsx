@@ -8,10 +8,12 @@ export const Button: FC<IButtonProps> = ({
     children,
     onClick,
     type,
+    disabled,
     className,
 }) => (
     <button
         className={clsx('rounded-lg px-4 py-2 bg-black text-white', className)}
+        disabled={!!disabled}
         onClick={onClick}
         type={type}
     >
