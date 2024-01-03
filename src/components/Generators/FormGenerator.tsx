@@ -26,7 +26,12 @@ export function FormGenerator<IFormData extends FieldValues>({
     });
 
     return (
-        <form className="form" onSubmit={handleSubmit((data) => mutate(data))}>
+        <form
+            className="form"
+            onSubmit={(event) => {
+                void handleSubmit((data) => mutate(data))(event);
+            }}
+        >
             {renderForm({ register, errors })}
             {isPending && <p>Loading...</p>}
             {isError && (
