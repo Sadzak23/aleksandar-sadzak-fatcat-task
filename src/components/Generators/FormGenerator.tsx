@@ -22,7 +22,7 @@ export function FormGenerator<IFormData extends FieldValues>({
     });
 
     const { mutate, isPending, isError, error, isSuccess } = useMutation({
-        onSuccess: reset,
+        onSuccess: () => reset(),
     });
 
     return (

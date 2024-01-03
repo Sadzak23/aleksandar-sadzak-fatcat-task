@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+import { Table } from '@homework-task/components/Table';
 import { IUser, IUserData } from '@homework-task/types/IUser';
 
 interface Props {
@@ -15,24 +16,5 @@ export const UserTable: FC<Props> = ({ users }) => {
         { id: 'phone', label: 'Phone' },
     ];
 
-    return (
-        <table className="user-table">
-            <thead>
-                <tr>
-                    {columns.map((e) => (
-                        <th key={e.id}>{e.label}</th>
-                    ))}
-                </tr>
-            </thead>
-            <tbody>
-                {users.map((e) => (
-                    <tr key={e.id}>
-                        {columns.map((col) => (
-                            <td key={col.id}>{e[col.id]}</td>
-                        ))}
-                    </tr>
-                ))}
-            </tbody>
-        </table>
-    );
+    return <Table<IUserData> columns={columns} data={users} />;
 };

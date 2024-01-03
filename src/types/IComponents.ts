@@ -44,3 +44,8 @@ export interface IPanelShowcaseProps {
 export interface ITrustBarProps {
     images: string[];
 }
+
+export interface ITableColumn {
+    id: string;
+    label: string;
+}
