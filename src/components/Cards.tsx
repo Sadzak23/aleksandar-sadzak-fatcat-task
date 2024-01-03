@@ -8,7 +8,7 @@ import type { ICardsProps } from '@homework-task/types/IComponents';
 
 export const Cards: FC<ICardsProps> = ({ cards }) => (
     <div className="flex justify-center items-center">
-        <div className="grid grid-cols-2 gap-8 w-8/12">
+        <div className="grid grid-cols-2 gap-8">
             {cards.map(
                 ({
                     title,
@@ -20,7 +20,7 @@ export const Cards: FC<ICardsProps> = ({ cards }) => (
                 }) => (
                     <div
                         key={title}
-                        className={clsx('rounded-md', 'p-8', background)}
+                        className={clsx('rounded-md p-8', background)}
                     >
                         <img src={image} alt="Icon" width="120" />
                         <div className="my-8">
