@@ -4,12 +4,27 @@ import cat3 from '@homework-task/assets/cats/cat_7.png';
 import cat4 from '@homework-task/assets/cats/cat_8.png';
 import cat5 from '@homework-task/assets/cats/cat_9.png';
 import { IPageGeneratorDataItem } from '@homework-task/types/IGeneratorData';
+import { simpleFormProps } from '@homework-task/utils/simpleFormData';
 
 export const homePageData: IPageGeneratorDataItem[] = [
     {
         id: 'users',
         layout: { type: 'column' },
         components: [{ id: 'usersList', type: 'usersList' }],
+    },
+    {
+        id: 'form',
+        layout: {
+            type: 'column',
+            props: { background: 'bg-yellow' },
+        },
+        components: [
+            {
+                id: 'form',
+                type: 'form',
+                props: simpleFormProps,
+            },
+        ],
     },
     {
         id: 'items',

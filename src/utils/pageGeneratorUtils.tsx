@@ -1,5 +1,6 @@
 import { Button } from '@homework-task/components/Button';
 import { Cards } from '@homework-task/components/Cards';
+import { FormGenerator } from '@homework-task/components/Generators/FormGenerator';
 import { Hero } from '@homework-task/components/Hero';
 import { ItemsShowcase } from '@homework-task/components/ItemsShowcase';
 import { Layout } from '@homework-task/components/Layouts/Layout';
@@ -28,6 +29,8 @@ export const createPageComponent = (item: IComponentItem) => {
             return <TrustBar key={item.id} {...item.props} />;
         case 'usersList':
             return <UsersList key={item.id} />;
+        case 'form':
+            return <FormGenerator key={item.id} {...item.props} />;
     }
 };
 

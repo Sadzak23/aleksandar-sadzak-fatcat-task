@@ -1,3 +1,5 @@
+import { FieldValues } from 'react-hook-form';
+
 import {
     IButtonProps,
     ICardsProps,
@@ -6,6 +8,7 @@ import {
     IPanelShowcaseProps,
     ITrustBarProps,
 } from '@homework-task/types/IComponents';
+import { IFormGeneratorProps } from '@homework-task/types/IForm';
 import { ILayout } from '@homework-task/types/ILayout';
 
 export interface IPageGeneratorDataItem {
@@ -21,4 +24,5 @@ export type IComponentItem =
     | { id: string; type: 'itemShowcase'; props: IItemsShowcaseProps }
     | { id: string; type: 'panelShowcase'; props: IPanelShowcaseProps }
     | { id: string; type: 'trustBar'; props: ITrustBarProps }
-    | { id: string; type: 'usersList' };
+    | { id: string; type: 'usersList' }
+    | { id: string; type: 'form'; props: IFormGeneratorProps<FieldValues> };
