@@ -9,14 +9,19 @@ import { simpleFormProps } from '@homework-task/utils/simpleFormData';
 export const homePageData: IPageGeneratorDataItem[] = [
     {
         id: 'users',
-        layout: { type: 'column' },
+        layout: {
+            type: 'column',
+            props: {
+                title: 'Users',
+            },
+        },
         components: [{ id: 'usersList', type: 'usersList' }],
     },
     {
         id: 'form',
         layout: {
             type: 'column',
-            props: { background: 'bg-yellow' },
+            props: { title: 'Simple form', background: 'bg-mainGreen' },
         },
         components: [
             {
@@ -30,33 +35,9 @@ export const homePageData: IPageGeneratorDataItem[] = [
         id: 'items',
         layout: {
             type: 'row',
-            props: { background: 'bg-red' },
+            props: { title: 'Row section', background: 'bg-red' },
         },
         components: [
-            {
-                id: 'items',
-                type: 'itemShowcase',
-                props: {
-                    items: [
-                        {
-                            title: 'Item 1',
-                            description: 'Item 1 description',
-                        },
-                        {
-                            title: 'Item 2',
-                            description: 'Item 2 description',
-                        },
-                        {
-                            title: 'Item 3',
-                            description: 'Item 2 description',
-                        },
-                        {
-                            title: 'Item 4',
-                            description: 'Item 2 description',
-                        },
-                    ],
-                },
-            },
             {
                 id: 'cards',
                 type: 'cards',
@@ -86,13 +67,37 @@ export const homePageData: IPageGeneratorDataItem[] = [
                     ],
                 },
             },
+            {
+                id: 'items',
+                type: 'itemShowcase',
+                props: {
+                    items: [
+                        {
+                            title: 'Item 1',
+                            description: 'Item 1 description',
+                        },
+                        {
+                            title: 'Item 2',
+                            description: 'Item 2 description',
+                        },
+                        {
+                            title: 'Item 3',
+                            description: 'Item 2 description',
+                        },
+                        {
+                            title: 'Item 4',
+                            description: 'Item 2 description',
+                        },
+                    ],
+                },
+            },
         ],
     },
     {
         id: 'catsShow',
         layout: {
             type: 'column',
-            props: { background: 'bg-yellow' },
+            props: { title: 'Column section', background: 'bg-yellow' },
         },
         components: [
             {

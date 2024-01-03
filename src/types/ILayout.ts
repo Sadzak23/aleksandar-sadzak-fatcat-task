@@ -6,6 +6,7 @@ export interface ILayout {
 }
 
 export interface ILayoutProps {
+    title?: string;
     background?: string;
     children?: ReactNode;
 }
