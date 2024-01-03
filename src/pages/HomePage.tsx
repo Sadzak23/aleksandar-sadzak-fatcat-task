@@ -1,12 +1,15 @@
+import { FC } from 'react';
+
 import cat from '@homework-task/assets/cats/cat_5.png';
 import cat2 from '@homework-task/assets/cats/cat_6.png';
 import cat3 from '@homework-task/assets/cats/cat_7.png';
 import cat4 from '@homework-task/assets/cats/cat_8.png';
 import cat5 from '@homework-task/assets/cats/cat_9.png';
+import { PageGenerator } from '@homework-task/components/Generators/PageGenerator';
 import { IPageGeneratorDataItem } from '@homework-task/types/IGeneratorData';
 import { simpleFormProps } from '@homework-task/utils/simpleFormData';
 
-export const homePageData: IPageGeneratorDataItem[] = [
+const pageData: IPageGeneratorDataItem[] = [
     {
         id: 'users',
         layout: {
@@ -104,8 +107,8 @@ export const homePageData: IPageGeneratorDataItem[] = [
                 id: 'catHero',
                 type: 'hero',
                 props: {
-                    title: 'Hungry?',
-                    image: cat,
+                    title: "Doesn't this look good?",
+                    image: cat2,
                 },
             },
             {
@@ -118,3 +121,7 @@ export const homePageData: IPageGeneratorDataItem[] = [
         ],
     },
 ];
+
+export const HomePage: FC = () => {
+    return <PageGenerator data={pageData} />;
+};

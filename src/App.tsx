@@ -3,15 +3,14 @@ import { FC } from 'react';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-import { PageGenerator } from '@homework-task/components/Generators/PageGenerator';
-import { homePageData } from '@homework-task/utils/pageData';
+import { HomePage } from '@homework-task/pages/HomePage';
 
 const queryClient = new QueryClient();
 
 const App: FC = () => (
     <main>
         <QueryClientProvider client={queryClient}>
-            <PageGenerator data={homePageData} />
+            <HomePage />
         </QueryClientProvider>
     </main>
 );
